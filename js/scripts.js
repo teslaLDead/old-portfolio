@@ -214,7 +214,7 @@
             markers:[
             {
             address: "Ghaziabad, Uttar Pradesh",  /* You can change your address from here */
-            html: "<b>Address</b>: <br> Kavinagar, Ghaziabad.",   /* You can change display address text from here */
+            html: "<b>Address</b>: <br> Kavinagar,Ghaziabad.",   /* You can change display address text from here */
             popup: true
             }
             ]
