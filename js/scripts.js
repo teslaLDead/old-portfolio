@@ -1,19 +1,19 @@
 /*
-   
+
     Template Name : Rolling - Freelancer Portfolio Template
     Author : UiPasta Team
     Website : http://www.uipasta.com/
     Support : http://www.uipasta.com/support/
-	
-	
+
+
 */
 
 
 
 /*
-   
+
    Table Of Content
-   
+
    1. Preloader
    2. Smooth Scroll
    3. Scroll Naviagation Background Change with Sticky Navigation
@@ -26,7 +26,7 @@
   10. Testimonial Carousel/Slider
   11. Statistics Counter
   12. Google Map
- 
+
 
 */
 
@@ -36,15 +36,15 @@
 
     jQuery(document).ready(function () {
 
-        
+
        /* Preloader */
-		
+
         $(window).on('load', function() {
           $('body').addClass('loaded');
         });
-		
-		
-		
+
+
+
        /* Smooth Scroll */
 
         $('a.smoth-scroll').on("click", function (e) {
@@ -54,25 +54,25 @@
             }, 1000);
             e.preventDefault();
         });
-		
 
 
-       
+
+
        /* Scroll Naviagation Background Change with Sticky Navigation */
-		 
+
         $(window).on('scroll', function () {
-            if ($(window).scrollTop() > 100) {
+            if ($(window).scrollTop() > 500) {
                 $('.header-top-area').addClass('navigation-background');
             } else {
                 $('.header-top-area').removeClass('navigation-background');
             }
         });
-		
-		
-		
-		
+
+
+
+
        /* Mobile Navigation Hide or Collapse on Click */
-		
+
         $(document).on('click', '.navbar-collapse.in', function (e) {
             if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
                 $(this).collapse('hide');
@@ -81,14 +81,14 @@
         $('body').scrollspy({
             target: '.navbar-collapse',
             offset: 195
-        
+
 		 });
-		 
-		
-		
-		
+
+
+
+
         /* Scroll To Top */
-		
+
         $(window).scroll(function(){
         if ($(this).scrollTop() >= 500) {
             $('.scroll-to-top').fadeIn();
@@ -96,27 +96,27 @@
             $('.scroll-to-top').fadeOut();
          }
 	   });
-	
-	
+
+
 	    $('.scroll-to-top').click(function(){
 		  $('html, body').animate({scrollTop : 0},800);
 		  return false;
 	    });
-		
-		
-		
-		
+
+
+
+
         /* Typed.js */
-		
+
         $(window).load(function(){
         $(".typing").typed({
-            strings: ["I'm a Web Developer","and","a Graphic Designer.","I Love To Innovate."],    /* You can change the home section typing text from
+            strings: ["I'm a Web Developer","and","a UI/UX Designer.","I Create Awesome Stuff.",],    /* You can change the home section typing text from
 	                                                                                            here and do not use "&" use "and" */
-            typeSpeed: 50
+            typeSpeed: 40
           });
          });
-        
-		 
+
+
         /* Parallax Background */
 
         $(window).stellar({
@@ -127,26 +127,26 @@
             verticalOffset: 0,
         });
 
-        
-		
-		
+
+
+
         /* Portfolio Filtering */
 
         $('.portfolio-inner').mixItUp();
 
 
-       
+
         /* Magnific Popup */
 
         $('.portfolio-popup').magnificPopup({
             type: 'image',
-			
+
             gallery: { enabled: true },
 			zoom: { enabled: true,
 			        duration: 500
-					
+
           },
-		  
+
          image:{
                markup: '<div class="mfp-figure portfolio-pop-up">'+
                '<div class="mfp-close"></div>'+
@@ -161,13 +161,13 @@
                 return item.el.attr('title');
               }
             }
-		  
-		  
+
+
           });
 
-       
-	   
-		 
+
+
+
         /* Testimonial Carousel/Slider */
 
         $(".testimonial-carousel-list").owlCarousel({
@@ -185,16 +185,16 @@
             pagination: false,
             transitionStyle : "backSlide"
         });
-		
-		
-		
-		
+
+
+
+
         /* Statistics Counter */
-		
+
         $('.statistics').appear(function() {
            var counter = $(this).find('.statistics-count');
            var toCount = counter.data('count');
-      
+
            $(counter).countTo({
            from: 0,
            to: toCount,
@@ -202,11 +202,11 @@
            refreshInterval: 50
            })
            });
-		   
-		  
-         
+
+
+
          /* Google Map */
-		 
+
          $('#my-address').gMap({
             zoom: 5,
             scrollwheel: true,
@@ -219,8 +219,8 @@
             }
             ]
             });
-              
-		   
+
+
             });
 
    })(jQuery);
